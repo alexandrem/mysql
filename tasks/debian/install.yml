@@ -1,0 +1,6 @@
+---
+- name: MySQL | Make sure the MySql packages are installed
+  apt:
+    pkg: "{{ item }}"
+    update_cache: yes
+  with_items: mysql_packages

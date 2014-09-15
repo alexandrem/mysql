@@ -1,15 +1,12 @@
 # file: mysql/tasks/install.yml
+- include: redhat/install.yml
+  when: ansible_os_family == 'RedHat'
 
-- name: MySQL | Load the os specific variables
-  include_vars: "{{ansible_os_family | lower}}.yml"
-
-- name: MySQL | Make sure the MySql packages are installed
-  apt:
-    pkg: "{{item}}"
-    update_cache: yes
-  with_items: mysql_packages
+- include: debian/install.yml
+  when: ansible_os_family == 'Debian'
 
 - name: MySQL | Ensure MySQL is running
   service:
-    name: mysql
+    name: "{{ mysql_service_name }}"
     state: started
+    enabled: yes

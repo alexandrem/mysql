@@ -1,6 +1,8 @@
-## ANXS - MySQL [![Build Status](https://travis-ci.org/ANXS/mysql.png)](https://travis-ci.org/ANXS/mysql)
+## Ansible MySQL [![Build Status](https://travis-ci.org/alexandrem/mysql.png)](https://travis-ci.org/alexandrem/mysql)
 
-Ansible role that installs MySQL on (for now) Ubuntu variants.
+`forked from github.com/anxs/mysql`
+
+Ansible role that installs MySQL on Ubuntu and RedHat.
 Features include:
 - Installation of MySQL and it's dependencies
 - Basic configuration
@@ -8,6 +10,10 @@ Features include:
 - Add databases
 - Add users
 - Setup of monit process supervision
+
+## Notes:
+- Some default config variables are hardcoded, need to extract them in ansible defaults
+- Need more testing
 
 
 #### Requirements & Dependencies

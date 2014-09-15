@@ -2,10 +2,18 @@
 
 - name: MySQL | Update the my.cnf
   template:
-    src: etc_mysql_my.cnf.j2
-    dest: /etc/mysql/my.cnf
+    src: etc/my.cnf.j2
+    dest: "{{ mysql_cnf_path }}"
     owner: root
     group: root
     mode: 0644
   notify:
     - restart mysql
+
+- name: ensure the mysql conf dir exists
+  file:
+    path: "{{ mysql_include_conf_dir }}"
+    state: directory
+    owner: root
+    group: root
+    mode: 0755
