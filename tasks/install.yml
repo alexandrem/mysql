@@ -1,11 +1,11 @@
-# file: mysql/tasks/install.yml
+---
 - include: redhat/install.yml
   when: ansible_os_family == 'RedHat'
 
 - include: debian/install.yml
   when: ansible_os_family == 'Debian'
 
-- name: MySQL | Ensure MySQL is running
+- name: ensure MySQL is running
   service:
     name: "{{ mysql_service_name }}"
     state: started

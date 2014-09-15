@@ -1,6 +1,5 @@
-# file: mysql/tasks/configure.yml
-
-- name: MySQL | Update the my.cnf
+---
+- name: update the my.cnf
   template:
     src: etc/my.cnf.j2
     dest: "{{ mysql_cnf_path }}"

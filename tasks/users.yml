@@ -1,6 +1,5 @@
-# file: mysql/tasks/users.yml
-
-- name: MySQL | Make sure the MySQL users are present
+---
+- name: make sure the MySQL users are present
   mysql_user:
     name: "{{ item.name }}"
     password: "{{ item.pass | default('pass') }}"
