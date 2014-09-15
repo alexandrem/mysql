@@ -11,7 +11,7 @@ Features include:
 - Add users
 - Setup of monit process supervision
 
-## Notes:
+#### Notes:
 - Some default config variables are hardcoded, need to extract them in ansible defaults
 - Need more testing
 
