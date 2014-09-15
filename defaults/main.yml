@@ -2,7 +2,7 @@
 ## CREDENTIALS ##
 
 # Default root password
-mysql_root_password: 'root'
+mysql_root_password: root
 
 
 ## BASIC SETTINGS ##
@@ -23,7 +23,7 @@ mysql_skip_external_locking: True
 # All interaction with mysqld must be made via Unix sockets or named pipes.
 # Note that using this option without enabling named pipes on Windows
 # (via the "enable-named-pipe" option) will render mysqld useless!
-mysql_skip_networking: True
+mysql_skip_networking: False
 
 # Path for server message default language
 mysql_language: /usr/share/mysql/english
