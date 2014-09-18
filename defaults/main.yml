@@ -1,4 +1,10 @@
 ---
+## GENERAL OPTIONS ##
+
+# Will reload mysql service when config changes
+mysql_reload_service_on_update: true
+
+
 ## CREDENTIALS ##
 
 # Default root password

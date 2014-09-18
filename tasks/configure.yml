@@ -6,8 +6,7 @@
     owner: root
     group: root
     mode: 0644
-  notify:
-    - restart mysql
+  register: config_res
 
 - name: ensure the mysql conf dir exists
   file:
@@ -16,3 +15,12 @@
     owner: root
     group: root
     mode: 0755
+
+# we don't use notify because we want to reload immediately.
+# notify will reload after playbook run. Sometimes not reloading the
+# config could break the next role executions in same playbook.
+- name: restart mysql if config changed
+  service:
+    name: "{{ mysql_service_name }}"
+    state: restarted
+  when: (config_res | changed) and mysql_reload_config_on_update
