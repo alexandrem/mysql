@@ -23,4 +23,4 @@
   service:
     name: "{{ mysql_service_name }}"
     state: restarted
-  when: (config_res | changed) and mysql_reload_config_on_update
+  when: config_res|changed and mysql_reload_service_on_update
