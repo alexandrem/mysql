@@ -99,6 +99,9 @@ innodb_log_buffer_size = {{ mysql_innodb_log_buffer_size }}
 innodb_log_file_size = {{ mysql_innodb_log_file_size }}
 {{ mysql_innodb_file_per_table }}
 
+character_set_server = utf8
+collation_server = utf8_general_ci
+
 [mysqldump]
 quick
 quote-names
