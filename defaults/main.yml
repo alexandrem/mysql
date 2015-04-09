@@ -24,6 +24,12 @@ mysql_skip_locking: False
 
 mysql_skip_external_locking: True
 
+mysql_pid_file: /var/run/mysqld/mysqld.pid
+
+mysql_log_file: /var/log/mysqld.log
+
+mysql_user: mysql
+
 # Don't listen on a TCP/IP port at all. This can be a security enhancement,
 # if all processes that need to connect to mysqld run on the same host.
 # All interaction with mysqld must be made via Unix sockets or named pipes.
