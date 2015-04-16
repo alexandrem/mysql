@@ -1,6 +1,7 @@
 ---
 - name: check connection access
   shell: /usr/bin/mysqladmin -u root -p{{ mysql_root_password }} status &> /dev/null
+  changed_when: False
   register: root_access
   ignore_errors: True
 
@@ -57,6 +58,7 @@
 
 - name: flush privileges in case anonymous users created problems
   command: /usr/bin/mysql -u root -p{{ mysql_root_password }} -e "flush privileges"
+  changed_when: False
 
 - name: remove the MySQL test database
   mysql_db:
