@@ -1,4 +1,6 @@
 ---
+# file: mysql/defaults/main.yml
+
 ## GENERAL OPTIONS ##
 
 # Will reload mysql service when config changes
