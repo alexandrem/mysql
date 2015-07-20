@@ -1,6 +1,6 @@
 ## Ansible MySQL [![Build Status](https://travis-ci.org/alexandrem/mysql.png)](https://travis-ci.org/alexandrem/mysql)
 
-`forked from github.com/anxs/mysql`
+`Note: Experimental`
 
 Ansible role that installs MySQL on Ubuntu and RedHat.
 Features include:
@@ -70,6 +70,10 @@ mysql_users:
 # GLOBAL Setting
 monit_protection: false                 # true or false, requires ANXS.monit
 ```
+
+#### Credits
+
+Based on https://github.com/geerlingguy/ansible-role-mysql
 
 
 #### License
